@@ -10,14 +10,24 @@
     <EditText
         android:id="@+id/editText"
         android:layout_width="match_parent"
+        android:padding="8dp"
+        android:background="@drawable/rect_rounded_stroke"
         android:layout_height="wrap_content"
         android:hint="Введите задачку" />
 
     <Button
         android:id="@+id/btnSave"
+        android:enabled="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Save" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button_gradient"
+        android:layout_marginTop="16dp"
+        android:text="Stop" />
 
 </LinearLayout>

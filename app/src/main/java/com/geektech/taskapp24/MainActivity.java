@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import com.geektech.taskapp24.utils.Prefs;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.annotation.NonNull;
@@ -28,7 +29,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initNavController();
-        navController.navigate(R.id.boardFragment);
+        Prefs prefs = new Prefs(this);
+        if (!prefs.isShown()) {
+            navController.navigate(R.id.boardFragment);
+        }
     }
 
     private void initNavController() {
